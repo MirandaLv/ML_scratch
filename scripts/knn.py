@@ -1,4 +1,15 @@
 
+"""
+K nearest neighbor is a supervised machine learning algorithm, and the predicted label of a point is based on the k nearest
+points' label close to it.
+- fit X, y as training dataset to the model.
+- for each point in the X-test, calculate the distance to all points in X, y
+- return the top k points
+- get the label
+
+"""
+
+
 import numpy as np
 from collections import Counter
 

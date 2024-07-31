@@ -15,7 +15,7 @@ import numpy as np
 from numpy.linalg import norm
 
 def euclidean(x1, x2):
-    return np.mean(np.sum((x1-x2)**2))
+    return np.sqrt(np.sum((x1-x2)**2))
 
 def cos_sim(x1, x2):
     return np.dot(x1,x2)/(norm(x1) * norm(x2))
