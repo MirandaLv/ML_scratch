@@ -1,4 +1,16 @@
 
+"""
+Kmeans is an unsupervised machine learning algorithm with the goals to cluster the input data into different groups based on the
+similarity between each points.
+- Input X, cluster = k,
+- Randomly select k points from X as the initial cluster centroids.
+- Calculating the distance of each point in X to the k centroids, and assign each point to the closest centroids.
+- Recalculating the centroids based on the current points in each cluster.
+- stops: 1. iteration number reached; 2. the centorids of each cluster do not change anymore.
+- Export the label of each points in X.
+"""
+
+
 import numpy as np
 from numpy.linalg import norm
 
@@ -7,6 +19,7 @@ def euclidean(x1, x2):
 
 def cos_sim(x1, x2):
     return np.dot(x1,x2)/(norm(x1) * norm(x2))
+
 
 class KMeans:
 
