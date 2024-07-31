@@ -50,6 +50,7 @@ if __name__ == "__main__":
     print("KNN classification accuracy", accuracy_score(y_test, predictions))
 
 
-
+# np.argsort()
+# np.argmin()
 
 
