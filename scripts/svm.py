@@ -1,6 +1,4 @@
 
-
-
 """
 support vectors:
 separating hyperplane
