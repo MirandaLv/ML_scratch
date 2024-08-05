@@ -1,6 +1,17 @@
 
 import numpy as np
 
+def r2_score(y_true, y_pred):
+    # 1 - (sum(residual of each point) / mean of y)
+    residuals = np.sum((y_true - y_pred)**2) # errors
+    estimated_mean_y = np.mean(y_true)
+
+    expected_residual = np.sum((y_true - estimated_mean_y)**2)
+    r2 = 1 - residuals/expected_residual
+
+    return r2
+
+
 class LinearRegression:
 
     def __init__(self, learning_rate=0.001, max_iters=100):
@@ -53,6 +64,8 @@ if __name__=="__main__":
     y_pred = regressor.predict(X_test)
 
     print(mse(y_pred, y_test))
+
+    print(r2_score(y_test, y_pred))
 
     y_pred_line = regressor.predict(X)
     cmap = plt.get_cmap("viridis")
