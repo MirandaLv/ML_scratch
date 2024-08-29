@@ -129,6 +129,9 @@ class DecisionTree:
             g_l, g_r = self._gini(y[left_idxs]), self._gini(y[right_idxs])
             child_g = (n_l / n) * g_l + (n_r / n) * g_r
 
+            # calculate information gain
+            ig = parent_g - child_g
+
         return ig
 
 
@@ -136,7 +139,7 @@ class DecisionTree:
         # Entropy = sum(-Pi * log(Pi))
         y_labels = np.unique(y)
         probs = [np.sum(y==cls)/len(y) for cls in y_labels]
-        return -np.sum([p * np.log2(p)for p in probs if p > 0])
+        return -np.sum([p * np.log2(p) for p in probs if p > 0])
 
 
     def _gini(self, y):
@@ -148,7 +151,7 @@ class DecisionTree:
 
     def _split(self, X_column, split_thre):
 
-        left_idxs = np.argwhere(X_column<=split_thre).flatten()
+        left_idxs = np.argwhere(X_column<split_thre).flatten()
         right_idxs = np.argwhere(X_column >= split_thre).flatten()
 
         return left_idxs, right_idxs
