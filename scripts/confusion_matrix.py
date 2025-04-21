@@ -8,6 +8,8 @@ def confusion(y_true, y_pred):
 
     for i in range(n_classes):
         for j in range(n_classes):
+            # row: true label
+            # column: predict label
             conf[i,j] = np.sum((y_true == classes[i]) & (y_pred == classes[j]))
     return conf
 

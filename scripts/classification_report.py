@@ -17,7 +17,6 @@ def classification_report(y_true, y_pred, labels=None):
         f1 = 2 * precision * recall / (precision + recall) if precision + recall > 0 else 0.0
         case_sum_support = sum(yt == label for yt in y_true)
 
-
         report[label] = {"precision": precision,
                          "recall": recall,
                          "f1": f1,

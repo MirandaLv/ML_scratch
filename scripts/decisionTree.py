@@ -46,8 +46,6 @@ class Node: # build a new node
     #     # get the majority label of the leaf
     #     return
 
-
-
 class DecisionTree:
 
     def __init__(self, max_depth=3, min_sample_split=2, n_feats=None):

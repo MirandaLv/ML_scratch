@@ -36,13 +36,23 @@ def calc_mode(nums):
 
     return res
 
-
 def calc_mean(nums):
     if not nums: return None
     return np.array(nums).mean()
 
+def calc_sd(nums):
+    std = np.array(nums).std()
+    return std
+
+def calc_var(nums):
+    var = np.array(nums).var()
+    return var
+
 example = [1,2,3,3,2,5,6,7,8]
 example1 = []
+
 print(calc_median(example))
 print(calc_mode(example))
 print(calc_mean(example))
+print(calc_sd(example))
+print(calc_var(example))

@@ -27,7 +27,6 @@ class KMeans:
         self.k = k
         self.max_iters = max_iters
 
-
     def predict(self, X):
         self.X = X
         self.n_samples, self.n_features = X.shape
