@@ -3,7 +3,6 @@
 # k nearest
 # naive bayes
 # gini impurity
-# Create a function to normalize a list using min-max scaling or z-score normalization.
 
 """
 Flatten a nested list of arbitrary depth.
