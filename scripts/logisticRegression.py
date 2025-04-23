@@ -2,8 +2,6 @@
 
 import numpy as np
 
-
-
 class LogisticRegression:
 
     def __init__(self, max_iters=100, learning_rate=0.001):
